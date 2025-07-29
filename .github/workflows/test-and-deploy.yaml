@@ -1,21 +1,21 @@
-name: deploy
+name: deploy # 工作流名称
 
-on:
+on: # 触发条件
   push:
     branches:
-      - master
+      - master  # 推送至 master 分支时触发
 
-jobs:
+jobs: # 定义任务
   test:
     name: Run Lint and Test
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
 
       - name: Install pnpm 
         run: npm install -g pnpm
@@ -26,17 +26,17 @@ jobs:
       - name: Run tests
         run: npm run test
 
-  build:
+  build:  # 任务 ID
     name: Build docs
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # 运行环境
     needs: test
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+    steps:  # 任务步骤
+      - name: Checkout repo # 步骤名称
+        uses: actions/checkout@v4  # 使用官方 Action 检出代码
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -59,7 +59,7 @@ jobs:
     needs: build
     steps:
       - name: Download docs
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: docs
 
