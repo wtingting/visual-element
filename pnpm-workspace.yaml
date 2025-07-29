@@ -1,0 +1,5 @@
+packages:
+  # 包含所有 packages 目录下的项目
+  - 'packages/*'
+  # 包含根目录下的项目 (可选)
+  - '!**/node_modules/**'
