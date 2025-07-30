@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev":"pnpm --filter @visual-element/example dev",
-    "docs:dev":"pnpm --filter @visual-element/docs dev",
-    "docs:build":"pnpm --filter @visual-element/docs build",
-    "test":"echo 'todo'"
+    "dev": "pnpm --filter @visual-element/playground dev",
+    "docs:dev": "pnpm --filter @visual-element/docs dev",
+    "docs:build": "pnpm --filter @visual-element/docs build",
+    "test": "pnpm --filter @visual-element/components test",
+    "build": "pnpm --filter visual-element build"
   },
   "keywords": [],
   "author": "",
@@ -24,17 +26,21 @@
     "postcss-each-variables": "^0.3.0",
     "postcss-for": "^2.1.1",
     "postcss-nested": "^7.0.2",
+    "release-it": "^19.0.4",
+    "rimraf": "^6.0.1",
     "typescript": "~5.8.3",
     "vite": "^7.0.6",
     "vitest": "^3.2.4",
     "vue-tsc": "^2.2.12"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@visual-element/hooks": "workspace:*",
+    "@visual-element/theme": "workspace:*",
+    "@visual-element/utils": "workspace:*",
+    "async-validator": "^4.2.5",
     "lodash-es": "^4.17.21",
-    "vue": "^3.5.18",
-    "visual-element":"workspace:*",
-    "@visual-element/hooks":"workspace:*",
-    "@visual-element/utils":"workspace:*",
-    "@visual-element/theme":"workspace:*"
+    "visual-element": "workspace:*",
+    "vue": "^3.5.18"
   }
 }
