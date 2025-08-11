@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "pnpm --filter @visual-element/playground dev",
+    "dev": "pnpm --filter @visual-element/play dev",
     "docs:dev": "pnpm --filter @visual-element/docs dev",
     "docs:build": "pnpm --filter @visual-element/docs build",
     "test": "pnpm --filter @visual-element/components test",

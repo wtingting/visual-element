@@ -4,7 +4,7 @@ import type { ButtonProps } from './type';
 defineOptions({
   name: "VeButton",
 });
-const props = withDefaults(defineProps<ButtonProps>(), {
+ withDefaults(defineProps<ButtonProps>(), {
   tag: "button",
   nativeType: "button",
 });

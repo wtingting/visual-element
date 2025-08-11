@@ -29,6 +29,12 @@
     "packages/components/index.ts",
     "packages/components/**/*.ts",
     "packages/components/**/*.vue",
+    "packages/three/index.ts",
+    "packages/three/**/*.ts",
+    "packages/three/**/*.vue",
+    "packages/echarts/index.ts",
+    "packages/echarts/**/*.ts",
+    "packages/echarts/**/*.vue"
   ],
   "exclude": ["packages/components/vitest.config.ts"]
 }

@@ -2,26 +2,7 @@
   "name": "visual-element",
   "version": "1.0.0",
   "description": "Visual element library by Vue3 + TypeScript",
-  "main": "./dist/umd/index.umd.cjs",
-  "module": "./dist/es/index.js",
-  "types": "./dist/types/core/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "import": "./dist/es/index.js",
-      "require": "./dist/umd/index.umd.cjs",
-      "types": "./dist/types/core/index.d.ts"
-    },
-    "./dist/":{
-      "import": "./dist/",
-      "require": "./dist/"
-    }
-  },
-  "sideEffects":[
-    "./dist/index.css"
-  ],
+   "main": "index.js",
   "type": "module",
   "scripts": {
     "build": "run-s clean build-only move-style",
@@ -45,8 +26,9 @@
     "move-file-cli": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "vite-plugin-dts": "^4.5.4",
-    "@visual-element/components": "workspace:*"
-
+    "@visual-element/components": "workspace:*",
+    "@visual-element/three": "workspace:*",
+    "@visual-element/echarts": "workspace:*"
   },
   "deerDependencies": {
     "vue": "^3.5.18"
